@@ -15,8 +15,7 @@ const Header: React.FC = () => {
       </h1>
       
       <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-        Discover our collection of digital services, tools, and resources. 
-        Click on any card to explore what we have to offer.
+        Discover our collection of digital services, tools, and resources.
       </p>
       
       <div className="mt-8 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
