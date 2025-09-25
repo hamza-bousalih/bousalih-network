@@ -37,35 +37,35 @@ const SubdomainCard: React.FC<SubdomainCardProps> = ({
 
   return (
     <div 
-      className={`group cursor-pointer bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border ${isFeatured ? 'border-blue-300 shadow-lg' : 'border-gray-100'} hover:border-blue-200 relative overflow-hidden`}
+      className={`group relative cursor-pointer bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border ${isFeatured ? 'border-blue-200' : 'border-gray-200'} hover:border-blue-300 overflow-hidden transform hover:-translate-y-1`}
       onClick={handleCardClick}
     >
       {isFeatured && (
-        <div className="absolute top-0 right-0 p-2">
-          <svg className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 24 24">
-            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
-          </svg>
+        <div className="absolute top-4 right-4">
+          <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-50 text-blue-700">
+            <svg className="w-4 h-4 mr-1 text-blue-500" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+            </svg>
+            Featured
+          </span>
         </div>
       )}
       
-      <div className="flex items-center justify-between mb-4">
+      <div className="flex items-center justify-between mb-3">
         <div className="flex items-center space-x-3">
-          <h3 className="font-semibold text-xl text-gray-900 group-hover:text-blue-600 transition-colors">
+          <h3 className="font-bold text-lg text-gray-900 group-hover:text-blue-700 transition-colors duration-200">
             {name}
           </h3>
         </div>
-        <div className="flex items-center space-x-2">
-          <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-blue-500 transition-colors" />
-        </div>
       </div>
 
-      <p className="text-gray-600 mb-4 text-sm leading-relaxed font-medium">
+      <p className="text-gray-600 mb-4 text-sm leading-relaxed font-normal line-clamp-3">
         {description}
       </p>
 
-      <div className="relative h-40 rounded-lg overflow-hidden bg-gray-50 border border-gray-100">
+      <div className="relative h-48 rounded-lg overflow-hidden bg-gray-100 border border-gray-200">
         {imageLoading && (
-          <div className="absolute inset-0 flex items-center justify-center bg-gray-50">
+          <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
             <div className="flex items-center space-x-2 text-gray-500">
               <div className="animate-spin rounded-full h-5 w-5 border-2 border-gray-300 border-t-blue-500"></div>
               <span className="text-sm font-medium">Loading preview...</span>
@@ -74,15 +74,15 @@ const SubdomainCard: React.FC<SubdomainCardProps> = ({
         )}
         
         {imageError ? (
-          <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100">
-            <Globe className="w-8 h-8 text-gray-400 mb-2" />
+          <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200">
+            <Globe className="w-10 h-10 text-gray-400 mb-2" />
             <span className="text-sm text-gray-500 font-medium">Preview unavailable</span>
           </div>
         ) : (
           <img
             src={previewImg || screenshotUrl}
             alt={`Preview of ${name}`}
-            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-102"
             onLoad={handleImageLoad}
             onError={handleImageError}
             style={{ display: imageLoading ? 'none' : 'block' }}
@@ -90,10 +90,11 @@ const SubdomainCard: React.FC<SubdomainCardProps> = ({
         )}
       </div>
 
-      <div className="mt-4 pt-3 border-t border-gray-100">
-        <span className="text-xs text-gray-500 font-mono bg-gray-50 px-2 py-1 rounded">
+      <div className="mt-4 pt-3 border-t border-gray-200 flex items-center justify-between">
+        <span className="text-xs text-gray-500 font-mono bg-gray-100 px-2.5 py-1 rounded-md">
           {url.replace('https://', '')}
         </span>
+        <span className="text-xs text-gray-400 font-medium">Click to visit site</span>
       </div>
     </div>
   );
