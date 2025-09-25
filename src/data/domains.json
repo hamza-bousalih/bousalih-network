@@ -3,11 +3,15 @@
     "name": "Hamza Bousalih",
     "url": "https://hamza.bousalih.com",
     "previewImg": "/public/hamza.bousalih.com.png",
-    "description": "Professional portfolio showcasing projects and achievements"
+    "description": "Portfolio of Hamza Bousalih highlighting professional experience, projects, and skills.",
+    "isHidden": false,
+    "isFeatured": true
   },
   {
     "name": "Tilila Box (FreeLance)",
     "url": "https://tilila-box.bousalih.com",
-    "description": "Curated beauty and gift boxes for women, blending self-care and elegance."
+    "description": "Curated beauty and gift boxes for women, blending self-care and elegance.",
+    "isHidden": true,
+    "isFeatured": false
   }
 ]
