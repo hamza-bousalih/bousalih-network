@@ -2,43 +2,12 @@
   {
     "name": "Hamza Bousalih",
     "url": "https://hamza.bousalih.com",
-    "description": "Professional portfolio showcasing projects and achievements",
-    "icon": "💼"
+    "previewImg": "/public/hamza.bousalih.com.png",
+    "description": "Professional portfolio showcasing projects and achievements"
   },
   {
-    "name": "Blog",
-    "url": "https://blog.bousalih.com",
-    "description": "Personal blog about technology, programming, and innovative ideas",
-    "icon": "📝"
-  },
-  {
-    "name": "Shop",
-    "url": "https://shop.bousalih.com", 
-    "description": "Online store featuring curated products and digital goods",
-    "icon": "🛒"
-  },
-  {
-    "name": "Portfolio",
-    "url": "https://portfolio.bousalih.com",
-    "description": "Professional portfolio showcasing projects and achievements",
-    "icon": "💼"
-  },
-  {
-    "name": "Tools",
-    "url": "https://tools.bousalih.com",
-    "description": "Collection of useful web tools and utilities",
-    "icon": "🔧"
-  },
-  {
-    "name": "API",
-    "url": "https://api.bousalih.com",
-    "description": "RESTful API services and documentation",
-    "icon": "⚡"
-  },
-  {
-    "name": "Docs",
-    "url": "https://docs.bousalih.com",
-    "description": "Technical documentation and guides",
-    "icon": "📚"
+    "name": "Tilila Box",
+    "url": "https://tilila-box.bousalih.com",
+    "description": "Personal blog about technology, programming, and innovative ideas"
   }
 ]

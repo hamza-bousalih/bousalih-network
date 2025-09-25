@@ -5,10 +5,10 @@ interface SubdomainCardProps {
   name: string;
   url: string;
   description: string;
-  icon: string;
+  previewImg?: string;
 }
 
-const SubdomainCard: React.FC<SubdomainCardProps> = ({ name, url, description, icon }) => {
+const SubdomainCard: React.FC<SubdomainCardProps> = ({ name, url, description, previewImg }) => {
   const [imageLoading, setImageLoading] = useState(true);
   const [imageError, setImageError] = useState(false);
   
@@ -36,7 +36,6 @@ const SubdomainCard: React.FC<SubdomainCardProps> = ({ name, url, description, i
       {/* Header with icon and name */}
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center space-x-3">
-          <span className="text-2xl">{icon}</span>
           <h3 className="font-semibold text-xl text-gray-800 group-hover:text-blue-600 transition-colors">
             {name}
           </h3>
@@ -67,7 +66,7 @@ const SubdomainCard: React.FC<SubdomainCardProps> = ({ name, url, description, i
           </div>
         ) : (
           <img
-            src={screenshotUrl}
+            src={previewImg || screenshotUrl}
             alt={`Preview of ${name}`}
             className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
             onLoad={handleImageLoad}

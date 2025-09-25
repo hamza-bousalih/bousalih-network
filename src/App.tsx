@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import SubdomainCard from './components/SubdomainCard';
 import Header from './components/Header';
 import domainsData from './data/domains.json';
@@ -7,7 +7,7 @@ interface Domain {
   name: string;
   url: string;
   description: string;
-  icon: string;
+  previewImg?: string;
 }
 
 function App() {
@@ -62,7 +62,7 @@ function App() {
                   name={domain.name}
                   url={domain.url}
                   description={domain.description}
-                  icon={domain.icon}
+                  previewImg={domain.previewImg}
                 />
               </div>
             ))}
