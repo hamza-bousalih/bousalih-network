@@ -19,10 +19,6 @@ const Header: React.FC = () => {
         Bousalih Network
       </h1>
       
-      <p className="text-lg md:text-xl lg:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed font-normal transition-opacity duration-500 opacity-100">
-        Discover our curated ecosystem of cutting-edge digital services and tools designed to empower your journey.
-      </p>
-      
       <div className="mt-10 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent max-w-xl mx-auto transition-all duration-300"></div>
     </header>
   );
