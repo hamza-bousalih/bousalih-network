@@ -21,7 +21,7 @@ const SubdomainCard: React.FC<SubdomainCardProps> = ({
   const [imageError, setImageError] = useState(false);
   
   const screenshotUrl = `https://api.microlink.io?url=${encodeURIComponent(url)}&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1200&viewport.height=800`;
-  
+  console.log(previewImg)
   const handleCardClick = () => {
     window.open(url, '_blank', 'noopener,noreferrer');
   };
@@ -96,7 +96,7 @@ const SubdomainCard: React.FC<SubdomainCardProps> = ({
             />
             <div className="absolute inset-0 bg-blue-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
               <span className="text-white text-sm font-medium bg-blue-600 px-3 py-1 rounded-full">
-                Explore {name}
+                {url.replace('https://', '')}
               </span>
             </div>
           </>
@@ -107,7 +107,6 @@ const SubdomainCard: React.FC<SubdomainCardProps> = ({
         <span className="text-xs text-gray-600 font-mono bg-gray-100 px-3 py-1.5 rounded-md truncate max-w-[60%]">
           {url.replace('https://', '')}
         </span>
-        <span className="text-xs text-gray-500 font-medium">Click or press Enter to visit</span>
       </div>
     </div>
   );

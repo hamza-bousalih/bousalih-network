@@ -8,6 +8,14 @@
     "isFeatured": true
   },
   {
+    "name": "BSH Solutions - Docs",
+    "url": "https://docs.bousalih.com",
+    "previewImg": "/docs.bousalih.com.png",
+    "description": "Documentation for BSH Solutions projects. visite and explore all solutions provided by BSH team.",
+    "isHidden": false,
+    "isFeatured": true
+  },
+  {
     "name": "Tilila Box (FreeLance)",
     "url": "https://tilila-box.bousalih.com",
     "description": "Curated beauty and gift boxes for women, blending self-care and elegance.",
